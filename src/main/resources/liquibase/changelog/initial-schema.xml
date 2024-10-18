@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- ChangeSet for app_famille table -->
+    <changeSet id="1" author="Ahmed El moubarack">
+        <createTable tableName="app_famille">
+            <column name="id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nni" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="etat" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_pere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_gr_pere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_famille" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_mere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_mere2" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_famille_mere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gender" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lieu_naissnce" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="wilaya" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbr_fille" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbr_grcon" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="foto" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="uploaded_at" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dat_twjih" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dat_kevalle" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="moustrj" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="wevat" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbr_frr_encharge" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="etudier" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="etat_etude" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_ecole" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="maladie" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dscrpt_sente" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="trubi" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="trubi_mere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="logemnt" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="logemnt_detail" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rue" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="num_maison" type="int"/>
+            <column name="etat_logement" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="loyer_ou" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_mouil" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="degre_parence" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rendmnt_mensuel" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="source_rendmnt" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="depense_mensuel" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="code" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="code_sponse" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col1" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col2" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col3" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col4" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col5" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col6" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- ChangeSet for app_frere table -->
+    <changeSet id="2" author="Ahmed El moubarack">
+        <createTable tableName="app_frere">
+            <column name="id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="age" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nouv_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+
+    <!-- ChangeSet for app_mewssimiye table -->
+    <changeSet id="3" author="Ahmed El moubarack">
+        <createTable tableName="app_mewssimiye">
+            <column name="id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="annee" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="famille_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="projet_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- ChangeSet for app_moulhaka table -->
+    <changeSet id="4" author="Ahmed El moubarack">
+        <createTable tableName="app_moulhaka">
+            <column name="id" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nni" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="etat" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_pere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_gr_pere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_famille" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_mere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_mere2" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_famille_mere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gender" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="wilaya" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbr_fille" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbr_grcon" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="foto" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="uploaded_at" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dat_twjih" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dat_kevalle" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbr_frr_encharge" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="maladie" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dscrpt_sente" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="trubi" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="trubi_mere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="logemnt" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="logemnt_detail" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rendmnt_mensuel" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="source_rendmnt" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="depense_mensuel" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="code" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="code_sponse" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col1" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col2" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col3" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col4" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col5" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col6" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="spons_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- ChangeSet for creating the app_user table -->
+    <changeSet id="5" author="Ahmed El moubarack">
+        <createTable tableName="app_user">
+            <column name="id" type="BIGSERIAL">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="email" type="VARCHAR(255)"/>
+            <column name="username" type="VARCHAR(255)"/>
+            <column name="first_name" type="VARCHAR(255)"/>
+            <column name="last_name" type="VARCHAR(255)"/>
+            <column name="PASSWORD" type="VARCHAR(255)"/>
+            <column name="reset_token" type="VARCHAR(255)"/>
+            <column name="LANGUAGE" type="VARCHAR(255)"/>
+            <column name="birth_place" type="VARCHAR(255)"/>
+            <column name="birth_date" type="TIMESTAMP"/>
+            <column name="ROLE" type="VARCHAR(255)"/>
+            <column name="user_active" type="BOOLEAN"/>
+            <column name="created_at" type="TIMESTAMP"/>
+        </createTable>
+    </changeSet>
+
+    <!-- ChangeSet for adding unique constraint on email -->
+    <changeSet id="6" author="Ahmed El moubarack">
+        <addUniqueConstraint columnNames="email" constraintName="uk_email_in_table_app_user" tableName="app_user"/>
+    </changeSet>
+
+    <!-- ChangeSet for adding unique constraint on username -->
+    <changeSet id="7" author="Ahmed El moubarack">
+        <addUniqueConstraint columnNames="username" constraintName="uk_username_in_table_app_user" tableName="app_user"/>
+    </changeSet>
+
+    <!-- Creating table app_nouveau -->
+    <changeSet id="8" author="Ahmed El moubarack">
+        <createTable tableName="app_nouveau">
+            <column name="id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="nni" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="etat" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_pere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_gr_pere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_famille" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_mere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_mere2" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_famille_mere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="gender" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dat_naissnce" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="lieu_naissnce" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="wilaya" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dat_dece_pere" type="date">
+                <constraints nullable="false"/>
+            </column>
+            <column name="cose_dece_pere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbr_fille" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbr_grcon" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="foto" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="uploaded_at" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dat_twjih" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dat_kevalle" type="datetime(6)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="moustrj" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="wevat" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nbr_frr_encharge" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="etudier" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="etat_etude" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nom_ecole" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="maladie" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="dscrpt_sente" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="trubi" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="trubi_mere" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="logemnt" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="logemnt_detail" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rue" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="num_maison" type="int"/>
+            <column name="etat_logement" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="loyer_ou" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone" type="int">
+                <constraints nullable="false"/>
+            </column>
+            <column name="phone2" type="int"/>
+            <column name="phone3" type="int"/>
+            <column name="nom_mouil" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="degre_parence" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="rendmnt_mensuel" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="source_rendmnt" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="depense_mensuel" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="code" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="code_sponse" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col1" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col2" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col3" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col4" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col5" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col6" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="spons_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Creating table app_projet -->
+    <changeSet id="9" author="Ahmed El moubarack">
+        <createTable tableName="app_projet">
+            <column name="id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="nom" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Creating table app_spons and inserting initial data -->
+    <changeSet id="10" author="Ahmed El moubarack">
+        <createTable tableName="app_spons">
+            <column name="id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="nom" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Creating table app_takrir -->
+    <changeSet id="11" author="Ahmed El moubarack">
+        <createTable tableName="app_takrir">
+            <column name="id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="foto" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="choukr" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="resultats" type="varchar(100)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="etat_snte" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="classes" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="annee" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col1" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col2" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col3" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="col4" type="varchar(255)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="is_deleted" type="varchar(1)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="nouv_id" type="int">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

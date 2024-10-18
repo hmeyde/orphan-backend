@@ -1,14 +1,17 @@
-version: '3.8'
-
+name: orphan-backend
 services:
-  mongo:
-    image: mongo:latest
-    container_name: mongodb
+  postgresql:
+    image: postgres:15.3
+    environment:
+      - POSTGRES_USER=orphan-backend
+      - POSTGRES_PASSWORD=
+      - POSTGRES_HOST_AUTH_METHOD=trust
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U $${POSTGRES_USER}']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    # If you want to expose these ports outside your dev PC,
+    # remove the "127.0.0.1:" prefix
     ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-
-volumes:
-  mongo-data:
-    driver: local
+      - 127.0.0.1:5432:5432
