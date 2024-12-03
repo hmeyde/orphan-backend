@@ -2171,4 +2171,11 @@
         </sql>
 
     </changeSet>
+
+    <changeSet id="2-data" author="Ahmed El moubarack">
+        <sql>
+            SELECT setval('app_nouveau_id_seq', (SELECT MAX(id) FROM app_nouveau) + 1);
+        </sql>
+    </changeSet>
+
 </databaseChangeLog>

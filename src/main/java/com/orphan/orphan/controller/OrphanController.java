@@ -1,10 +1,20 @@
 package com.orphan.orphan.controller;
 
+import com.orphan.orphan.dto.FileContentDTO;
+import com.orphan.orphan.dto.Orphan;
+import com.orphan.orphan.dto.OrphanInputDTO;
+import com.orphan.orphan.dto.OrphanOutputDTO;
 import com.orphan.orphan.model.OrphanEntity;
 import com.orphan.orphan.service.OrphanService;
+import lombok.SneakyThrows;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,31 +34,15 @@ public class OrphanController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<OrphanEntity> getOrphanById(@PathVariable Long id) {
-        Optional<OrphanEntity> famille = orphanService.getOrphanById(id);
-        return famille.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
+    public ResponseEntity<OrphanOutputDTO> getOrphanById(@PathVariable Long id) {
+        Optional<OrphanOutputDTO> orphanById = orphanService.getOrphanById(id);
+        return orphanById.map(ResponseEntity::ok).orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @SneakyThrows
     @PostMapping
-    public OrphanEntity createFamille(@RequestBody OrphanEntity famille) {
-        return orphanService.saveOrphan(famille);
-    }
-
-    @PutMapping("/{id}")
-    public ResponseEntity<OrphanEntity> updateOrphan(@PathVariable Long id, @RequestBody OrphanEntity familleDetails) {
-        Optional<OrphanEntity> famille = orphanService.getOrphanById(id);
-
-        if (famille.isPresent()) {
-            OrphanEntity updatedFamille = famille.get();
-            updatedFamille.setNni(familleDetails.getNni());
-            updatedFamille.setNom(familleDetails.getNom());
-            updatedFamille.setEtat(familleDetails.getEtat());
-            // Add all other field updates here...
-            orphanService.saveOrphan(updatedFamille);
-            return ResponseEntity.ok(updatedFamille);
-        } else {
-            return ResponseEntity.notFound().build();
-        }
+    public OrphanEntity createFamille(OrphanInputDTO orphan) {
+        return orphanService.saveOrphan(orphan);
     }
 
     @DeleteMapping("/{id}")

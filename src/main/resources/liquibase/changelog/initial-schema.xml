@@ -347,8 +347,8 @@
     <!-- Creating table app_nouveau -->
     <changeSet id="8" author="Ahmed El moubarack">
         <createTable tableName="app_nouveau">
-            <column name="id" type="int">
-                <constraints nullable="false" primaryKey="true"/>
+            <column name="id" type="BIGSERIAL">
+                <constraints primaryKey="true" nullable="false"/>
             </column>
             <column name="nni" type="varchar(255)">
                 <constraints nullable="false"/>
@@ -408,10 +408,10 @@
                 <constraints nullable="false"/>
             </column>
             <column name="dat_twjih" type="datetime(6)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="dat_kevalle" type="datetime(6)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="moustrj" type="varchar(100)">
                 <constraints nullable="false"/>
@@ -486,22 +486,22 @@
                 <constraints nullable="false"/>
             </column>
             <column name="col1" type="varchar(255)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="col2" type="varchar(255)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="col3" type="varchar(255)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="col4" type="varchar(255)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="col5" type="varchar(255)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="col6" type="varchar(255)">
-                <constraints nullable="false"/>
+                <constraints nullable="true"/>
             </column>
             <column name="is_deleted" type="varchar(1)">
                 <constraints nullable="false"/>
